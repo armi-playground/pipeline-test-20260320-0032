@@ -5,7 +5,8 @@ const BASE_URL = '/api'
 export async function fetchTasks(): Promise<Task[]> {
   const res = await fetch(`${BASE_URL}/tasks`)
   if (!res.ok) throw new Error(`Failed to fetch tasks: ${res.statusText}`)
-  return res.json()
+  const data = await res.json()
+  return data.tasks
 }
 
 export async function fetchTask(id: number): Promise<Task> {
