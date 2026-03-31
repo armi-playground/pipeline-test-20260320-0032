@@ -72,10 +72,16 @@ All fields optional:
 }
 ```
 
-## Backend (not yet implemented)
+## Backend
 
-The backend needs to:
-1. Serve the API endpoints listed above
-2. Use a database (SQLite recommended) for persistence
-3. Run on port 3001
-4. Return JSON responses matching the schema above
+Node.js + Express + SQLite backend located in `backend/`.
+
+### Setup
+
+```bash
+cd backend
+npm install
+npm start    # starts server on http://localhost:3001
+```
+
+The backend is now implemented and running!
